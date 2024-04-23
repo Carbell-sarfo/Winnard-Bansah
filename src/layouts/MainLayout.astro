@@ -1,19 +1,23 @@
 ---
 import Footer from "../components/Footer.astro"
 import Nav from "../components/Nav.astro"
-import "../css/style.css"
+import "../styles/styles.css"
 interface Props {
 	title: string;
 	description?: string;
 	image?: string
 }
 
-// import { ViewTransitions } from 'astro:transitions';
 
 const { title, 
 description="I thrive in managing diverse priorities with an organized approach and a positive mindset. My expertise as a Business Consultant encompasses strategic planning, project management, and risk mitigation.", 
 image="/images/band.jpg" } = Astro.props;
 ---
+
+
+
+
+
 
 <!doctype html>
 <html lang="en">
@@ -27,7 +31,9 @@ image="/images/band.jpg" } = Astro.props;
 		<title>{title}</title>
 
 		<!-- Main Stylesheet -->
-		<!-- <link rel="stylesheet" href="/src/css/"> -->
+		<link rel="stylesheet" href="./../styles/styles.css">
+		<link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.0/dist/flowbite.min.css">
+
 
 		<!-- Favicons -->
 		<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">

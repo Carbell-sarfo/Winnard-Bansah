@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    :root {
+      --clr-blue: 0 94 155;
+      --clr-orange: 254 165 2;
+      --clr-yellow: 255 231 17;
+      --clr-gray-light: 217 217 217;
+      --clr-gray-dark: 17 17 17;
+      --clr-black: 12 12 12;
+      --clr-white: 255, 255, 255;
+
+      /* --color-blue: rgba(0 94 155);
+      --color-orange: rgb(254 165 2);
+      --color-yellow: rgb(255 231 17);
+      --color-lightGray: rgb(23, 23, 23);
+      --color-darkGray: rgb(17 17 17);
+      --color-black: rgb(12 12 12);
+      --color-white: rgb(255, 255, 255); */
+    }
+  }
+
+
+::selection {
+    background-color: #005E9B;
+    color: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    /* position: relative; */
+    z-index: 1;
+    line-height: 2;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 1rem;
+    transition: .4s;
+}
+
+
+
+
+
+
+/* ========================================================================= */
+/*                        TYPOGRAPHY                                          */
+/* ========================================================================= */
+p,span,blockquote {
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+/* ========================================================================= */
+/*                        Buttons                                          */
+/* ========================================================================= */
+.btn {
+    display: inline-block;
+    padding: .8rem 1.8rem;
+    transition: .4s;
+    border: 2px solid;
+    border-radius: .5rem;
+}
+
+
+.btn-neutral {
+    color: rgb(var(--clr-white));
+    border: 2px solid rgb(var(--clr-white));
+}
+
+
+
+
+
+
+
+
+
+
+/* ========================================================================= */
+/*                        CONTAINER                                          */
+/* ========================================================================= */
+.container {
+    /* display: block; */
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    height: 100%;
+    max-width: 2580px;
+    position: relative;
+}
+ /* wrapper */
+.wrapper {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    .wrapper {
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+
+
+}
+@media (min-width: 1500px) {
+    .wrapper {
+        padding-right: 200px;
+        padding-left: 200px;
+    }
+
+}

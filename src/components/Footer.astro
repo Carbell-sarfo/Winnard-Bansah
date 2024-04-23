@@ -1,0 +1,171 @@
+---
+import { Image } from "astro:assets"
+
+import Winnard from "/src/assets/winnard-1.png"
+---
+
+
+
+<footer class="section-footer pt-20 pb-8">
+    <div class="container wrapper">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-20 mb-12">
+            <!-- Image sided -->
+            <div class="">
+                <div class="flex items-center">
+                    <Image src={Winnard} alt="Winnard Bansah" class="w-[150px] mr-4" />
+                    <div>
+                        <h3>Winnard Bansah</h3>
+                        <p>Digital Branding</p>
+                    </div>
+                </div>
+                <!-- Footer Social Icons -->
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a href="https://www.linkedin.com/in/winnardbansah/" class="social-link" target="_blank" title="let's connect on LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://twitter.com/WinnardBansah" class="social-link" target="_blank" title="Are you on X-Twitter?">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.instagram.com/winnardbansah/" class="social-link" target="_blank" title="Follow me on Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://github.com/winnardbansah" class="social-link" target="_blank" title="Ready for a collaboration on Github?">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- End of Footer Social Icons -->
+            </div>
+            <!-- End of Image Side of footer -->
+
+            <!-- Call to Action Footer -->
+            <div>
+                <a href="https://mail.google.com/mail/u/1/#inbox?compose=CllgCHrfTTWxMRGcwmGxpXCmWqHGCxrDFvxzLKFhjLgMkgfglwDfNkmXXGJRCJdWWDNWnrktLdB" class="footer-cta">
+                    <h1>Get in touch <i class="fa-solid fa-arrow-right"></i></h1>
+                </a>
+                <div class="flex">
+                    <div class="mr-4">
+                        <span class="block">Email</span>
+                        <a href="https://mail.google.com/mail/u/1/#inbox?compose=CllgCHrfTTWxMRGcwmGxpXCmWqHGCxrDFvxzLKFhjLgMkgfglwDfNkmXXGJRCJdWWDNWnrktLdB">Bansahwinnard@gmail.com</a>
+                    </div>
+                    <div>
+                        <span class="block">Call</span>
+                        <a href="tel:+233(0)249421290" target="_blank">+233 (0) 241 105 423</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+
+        <span class="block text-sm text-gray-500 text-center dark:text-gray-400">Copyright &copy; Winnard Bansah 2024 &nbsp;| &nbsp; Built with <i class="fa-solid fa-heart text-red-500"></i> by <a href="https://carbellsarfo.netlify.app/" target="_blank" class="text-red-500 hover:text-red-700">Carbell</a></span>
+    </div>
+</footer>
+
+
+
+
+
+<style lang="scss">
+    /* install Sass dependency to be able to use sass */
+
+
+.section-footer {
+    background-color: rgb(var(--clr-black));
+    color: rgb(var(--clr-gray-light));
+    border-top: 1px solid rgb(var(--clr-gray-dark));
+}
+
+
+
+
+
+
+
+
+// Social Media Icons
+.section-footer .social-list {
+    display: flex;
+    list-style: none;
+    margin-top: 1rem;
+
+    .social-item {
+
+        &:not(:last-child) {
+            margin-right: .5rem;
+        }
+    }
+    .social-link {
+        display: flex;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgb(var(--clr-gray-light));
+        background-image: linear-gradient(to bottom, rgb(var(--clr-gray-dark)), rgb(var(--clr-black)));
+        position: relative;
+        z-index: 1;
+        transition: .4s;
+        overflow: hidden;
+
+        &:hover,
+        &:focus {
+            color: rgb(var(--clr-black))
+        }
+
+        &:hover::after,
+        &:focus::after {
+            top: 0;
+        }
+
+
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgb(var(--clr-gray-light));
+            transition: .4s;
+            z-index: -1;
+        }
+    }
+}
+// End of Social media icons
+
+
+
+
+
+// Footer CTA
+.footer-cta {
+    display: inline-block;
+    font-size: 3rem;
+    transition: .4s;
+    margin-bottom: 2rem;
+
+    &:hover {
+        color: rgb(var(--clr-white));
+    }
+
+    &:hover i,
+    &:focus i {
+        transform: translate(10px);
+    }
+
+    i {
+        color: rgb(var(--clr-blue));
+        transition: .4s;
+    }
+}
+
+</style>
