@@ -76,12 +76,28 @@ h1,h2,h3,h4,h5,h6 {
     padding: .8rem 1.8rem;
     transition: .3s;
     position: relative;
-    border: 2px solid;
+    border: 2px solid transparent;
     border-radius: .5rem;
     overflow: hidden;
+    font-size: .9rem;
+}
+
+/* BTN yellow */
+.btn-yellow {
+    background: linear-gradient(to bottom, #FFE711, #FEA502);
+    color: #000;
+    transition: .4s;
+    border: 2px solid transparent
+}
+.btn-yellow:hover,
+.btn-yellow:focus {
+    background: #000;
+    border: 2px solid rgb(var(--clr-yellow));
+    color: rgb(var(--clr-yellow));
 }
 
 
+/* BTn Neutral */
 .btn-neutral {
     background-color: transparent;
     color: rgb(var(--clr-white));
