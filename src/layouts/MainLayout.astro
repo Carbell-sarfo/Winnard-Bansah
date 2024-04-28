@@ -2,6 +2,7 @@
 import Footer from "../components/Footer.astro"
 import Nav from "../components/Nav.astro"
 import "../styles/styles.css"
+// import "../js/main.js"
 interface Props {
 	title: string;
 	description?: string;
@@ -68,12 +69,13 @@ image="/images/band.jpg" } = Astro.props;
 		<Footer />
 		</section>
 
+		<!-- Main Js -->
+		<script src="/src/js/main.js"></script>
+
 		<!-- Flowbite JS file -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
-		<!-- Decap / Netlify CMS -->
-		<!-- <script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script> -->
-
+	
 		
 	</body>
 </html>

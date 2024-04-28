@@ -41,6 +41,8 @@ body {
     font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
     font-size: 1rem;
     transition: .4s;
+    background-color: rgb(var(--clr-gray-dark));
+    color: rgb(var(--clr-white));
 }
 
 
@@ -121,7 +123,7 @@ h1,h2,h3,h4,h5,h6 {
     opacity: 0;
     scale: 0;
     transform-origin: center;
-    transition: .3s ease-in-out;
+    transition: .2s ease-in-out;
 }
 
 .btn-neutral:hover,
@@ -187,7 +189,7 @@ h1,h2,h3,h4,h5,h6 {
 
 
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .wrapper {
         padding-right: 100px;
         padding-left: 100px;
@@ -195,7 +197,7 @@ h1,h2,h3,h4,h5,h6 {
 
 
 }
-@media (min-width: 1500px) {
+@media screen and (min-width: 1500px) {
     .wrapper {
         padding-right: 200px;
         padding-left: 200px;
