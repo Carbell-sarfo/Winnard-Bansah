@@ -130,23 +130,54 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
             <h2 class="heading-secondary">My Services</h2>
             <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">What the clients say about my work</h1>
 
-            <div id="testimonial-carousel" class="w-full pb-20 testimonial-carousel"> 
+            <div id="testimonial-carousel" class="w-full pb-20 testimonial-carousel mt-12"> 
                 <!-- testimonial 1 -->
-                <div class="testimonial">
+                <div class="testimonial service grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
                     <div>
                         <Image src={testimonial1} alt="Motor Insurance" class=""/>
                     </div>
-                    <div>
-                        <p class="company">COMPANY</p>
+                    <div class="md:col-span-2">
+                        <h3 class="company">COMPANY</h3>
                         <p class="mb-8">Duis aute irure dolor in reprehenderit in voluptate. Duis aute irure dolor in reprehenderit in voluptate.</p>
                         <div class="name">
                             <h2 class="heading-secondary">Jim Benson</h2>
-                            <p>VP OF DEVOPS AT COMPANY</p>
+                            <h3>VP OF DEVOPS AT COMPANY</h3>
                         </div>
                     </div>
                 </div> 
+                <!-- end of testimonial-1 -->
+                <!-- testimonial 2 -->
+                <div class="testimonial service grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
+                    <div>
+                        <Image src={testimonial1} alt="Motor Insurance" class=""/>
+                    </div>
+                    <div class="md:col-span-2">
+                        <h3 class="company">COMPANY</h3>
+                        <p class="mb-8">Duis aute irure dolor in reprehenderit in voluptate. Duis aute irure dolor in reprehenderit in voluptate.</p>
+                        <div class="name">
+                            <h2 class="heading-secondary">Jim Benson</h2>
+                            <h3>VP OF DEVOPS AT COMPANY</h3>
+                        </div>
+                    </div>
+                </div> 
+                <!-- end of testimonial-2 -->
+                <!-- testimonial 3 -->
+                <div class="testimonial service grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
+                    <div>
+                        <Image src={testimonial1} alt="Motor Insurance" class=""/>
+                    </div>
+                    <div class="md:col-span-2">
+                        <h3 class="company">COMPANY</h3>
+                        <p class="mb-8">Duis aute irure dolor in reprehenderit in voluptate. Duis aute irure dolor in reprehenderit in voluptate.</p>
+                        <div class="name">
+                            <h2 class="heading-secondary">Jim Benson</h2>
+                            <h3>VP OF DEVOPS AT COMPANY</h3>
+                        </div>
+                    </div>
+                </div> 
+                <!-- end of testimonial-3 -->
                 
-        </div>
+            </div>
         </div>
     </section>
     <!-- End of section testimonials -->
@@ -159,6 +190,7 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
     <section class="section-news py-20">
         <div class="container wrapper">
                 <h2 class="heading-secondary mb-12">News &amp; Blog</h2>
+                <h1 class="max-w-2xl text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white mb-20">Check out my latest articles and tutorials</h1>
                 <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                         {otherArticles.slice(0, HOMEPAGE_ARTICLES_LIMIT).map(
                                 article => (
@@ -266,10 +298,37 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 
 // =========================== Section Testimonial ==============================
-.section-testimonial {
+.section-testimonials {
 
     .testimonial {
-        display: flex !important;
+        display: grid !important;
+        width: 100%;
+        padding: 1rem;
+        margin-inline: 1rem;
+
+        img {
+            // max-height: 200px;
+            // width: auto;
+        }
+
+        .company {
+            text-decoration: uppercase;
+            color: rgb(82, 82, 82);
+        }
+
+        p {
+            font-size: 2rem;
+            line-height: 1.6;
+        }
+
+        h3 {
+            color: rgb(82, 82, 82);
+            font-weight: 400;
+        }
+        .heading-secondary {
+            margin-bottom: .5rem;
+        }
+
     }
 }
 

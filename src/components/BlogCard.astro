@@ -13,7 +13,7 @@ const {post} = Astro.props;
 ---
 
 
-<div class="">
+<div class="blog-card">
     <div class="bg-winblack rounded-lg overflow-hidden shadow-lg scale-in">
         <a href={'/blog/' + post.slug}>
             <Image
@@ -39,3 +39,21 @@ const {post} = Astro.props;
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+<style lang="scss">
+
+.blog-card {
+    transition: .2s;
+
+    &:hover,
+    &:focus {
+        transform: translateY(-5px);
+    }
+}
+</style>
