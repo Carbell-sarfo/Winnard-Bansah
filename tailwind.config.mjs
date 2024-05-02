@@ -7,28 +7,34 @@ export default {
 	theme: {
 		colors: {
 			// Using modern `rgb`
-			blue: 'rgb(var(--color-blue) / <alpha-value>)',
-			orange: 'rgb(var(--color-orange) / <alpha-value>)',
-			yellow: 'rgb(var(--color-yellow) / <alpha-value>)',
-			lightGray: 'rgb(var(--color-lightGray) / <alpha-value>)',
-			darkGray: 'rgb(var(--color-darkGray) / <alpha-value>)',
-			black: 'rgb(var(--color-black) / <alpha-value>)',
-			white: 'rgb(var(--color-white) / <alpha-value>)',
+			winblue: 'rgb(var(--clr-win-blue) / <alpha-value>)',
+			winorange: 'rgb(var(--clr-win-orange) / <alpha-value>)',
+			winyellow: 'rgb(var(--clr-win-yellow) / <alpha-value>)',
+			winlightGray: 'rgb(var(--clr-win-lightGray) / <alpha-value>)',
+			windarkGray: 'rgb(var(--clr-win-darkGray) / <alpha-value>)',
+			winblack: 'rgb(var(--clr-win-black) / <alpha-value>)',
+			winwhite: 'rgb(var(--clr-win-white) / <alpha-value>)',
+
+			// kofi: '#ff49db',
+			kofi: 'rgb(var(--clr-kofi) / <alpha-value>)',
+			// kofi: 'rgb(var(--clr-yellow) / <alpha-value>)',
+			"ama": 'rgba(255 231 17)',
 
 
 			// secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
 	  
 			// Using modern `hsl`
-			primary: 'hsl(var(--color-primary) / <alpha-value>)',
-			secondary: 'hsl(var(--color-secondary) / <alpha-value>)',
+			// primary: 'hsl(var(--color-primary) / <alpha-value>)',
+			// secondary: 'hsl(var(--color-secondary) / <alpha-value>)',
 	  
 			// Using legacy `rgba`
-			primary: 'rgba(var(--color-primary), <alpha-value>)',
-			secondary: 'rgba(var(--color-secondary), <alpha-value>)',
+			// primary: 'rgba(var(--color-primary), <alpha-value>)',
+			// secondary: 'rgba(var(--color-secondary), <alpha-value>)',
 		  },
 		extend: {},
 	},
 	plugins: [
-		require('flowbite/plugin')
+		require('flowbite/plugin'),
+		require('@tailwindcss/typography')
 	],
 }

@@ -114,7 +114,8 @@ import Logo from "/src/assets/logo-2.png"
 
 
 .nav-bar {
-    background: linear-gradient( to bottom, #002035, #002035);
+    // background: linear-gradient( to bottom, #002035, #002035);
+    background-color: transparent;
     width: 100%;
     position: relative;
 
@@ -147,7 +148,7 @@ import Logo from "/src/assets/logo-2.png"
             width: 66px;
             height: 30px;
             transform: scale(1.2);
-            box-shadow: 0 0 0 1px rgb(var(--clr-gray-light));
+            box-shadow: 0 0 0 1px rgb(var(--clr-win-gray-light));
             outline: 1px solid transparent;
 
             #theme-toggle-ball {
@@ -183,10 +184,10 @@ import Logo from "/src/assets/logo-2.png"
         }
 
         .icon-tabler-sun {
-            color: rgb(var(--clr-gray-light));
+            color: rgb(var(--clr-win-gray-light));
         }
         .icon-tabler-moon {
-            color: rgb(var(--clr-gray-light));
+            color: rgb(var(--clr-win-gray-light));
         }
     }
 
@@ -202,7 +203,7 @@ import Logo from "/src/assets/logo-2.png"
         .lines {
             width: 1.7rem;
             height: .1rem;
-            background-color: rgb(var(--clr-gray-light));
+            background-color: rgb(var(--clr-win-gray-light));
 
             &:not(:last-child) {
                 margin-bottom: .5rem;
@@ -254,13 +255,13 @@ import Logo from "/src/assets/logo-2.png"
 
         .nav-link {
             display: inline-block;
-            color: rgb(var(--clr-white));
+            color: rgb(var(--clr-win-white));
             padding: 0rem 2rem;
             font-size: .9rem;
 
             &:hover,
             &:focus {
-                color: rgb(var(--clr-blue))
+                color: rgb(var(--clr-win-blue))
             }
         }
     }
@@ -288,7 +289,7 @@ import Logo from "/src/assets/logo-2.png"
         .nav-list {
             width: 100%;
             transition: .4s;
-            background-color: rgb(var(--clr-black));
+            background-color: rgb(var(--clr-win-black));
             position: fixed;
             top: 0;
             left: 0;
@@ -317,11 +318,11 @@ import Logo from "/src/assets/logo-2.png"
                 font-size: 1.2rem;
                 border-radius: .5rem;
                 border: 1px solid transparent;
-                color: rgb(var(--clr-white));
+                color: rgb(var(--clr-win-white));
 
                 &:hover {
-                    border: 1px solid rgb(var(--clr-blue));
-                    color: rgb(var(--clr-blue));
+                    border: 1px solid rgb(var(--clr-win-blue));
+                    color: rgb(var(--clr-win-blue));
                 }
             }
         }

@@ -1,3 +1,13 @@
+/* table of content */
+/* 1. Reset */
+/* 2. typography */
+/* 3. Buttons */
+/* 4. Container */
+/* 5. Slick */
+/* Media Queries */
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,13 +15,14 @@
 
 @layer base {
     :root {
-      --clr-blue: 0 94 155;
-      --clr-orange: 254 165 2;
-      --clr-yellow: 255 231 17;
-      --clr-gray-light: 217 217 217;
-      --clr-gray-dark: 17 17 17;
-      --clr-black: 12 12 12;
-      --clr-white: 255, 255, 255;
+        --clr-win-orange: 254 165 2;
+        --clr-win-blue: 0 94 155;
+      --clr-win-gray-light: 217 217 217;
+      --clr-win-yellow: 255 231 17;
+      --clr-win-gray-dark: 17 17 17;
+      --clr-win-gray: 23 23 23;
+      --clr-win-black: 12 12 12;
+      --clr-win-white: 255 255 255;
 
       /* --color-blue: rgba(0 94 155);
       --color-orange: rgb(254 165 2);
@@ -25,7 +36,7 @@
 
 
 ::selection {
-    background-color: #005E9B;
+    background-color: #005E9B; 
     color: #ffffff;
 }
 
@@ -41,8 +52,8 @@ body {
     font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
     font-size: 1rem;
     transition: .4s;
-    background-color: rgb(var(--clr-gray-dark));
-    color: rgb(var(--clr-white));
+    background-color: rgb(var(--clr-win-gray-dark));
+    color: rgb(var(--clr-win-white));
 }
 
 
@@ -62,7 +73,26 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: bold;
 }
 
-
+.heading-secondary {
+    position: relative;
+    padding-left: 1rem;
+    font-size: .9rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    z-index: 1;
+}
+.heading-secondary::before {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 100%;
+    background-color: rgb(var(--clr-win-blue));
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transform: rotate(15deg);
+}
 
 
 
@@ -94,16 +124,16 @@ h1,h2,h3,h4,h5,h6 {
 .btn-yellow:hover,
 .btn-yellow:focus {
     background: #000;
-    border: 2px solid rgb(var(--clr-yellow));
-    color: rgb(var(--clr-yellow));
+    border: 2px solid rgb(var(--clr-win-yellow));
+    color: rgb(var(--clr-win-yellow));
 }
 
 
 /* BTn Neutral */
 .btn-neutral {
     background-color: transparent;
-    color: rgb(var(--clr-white));
-    border: 2px solid rgb(var(--clr-white));
+    color: rgb(var(--clr-win-white));
+    border: 2px solid rgb(var(--clr-win-white));
     z-index: 1;
 }
 .btn-neutral:hover::after {
@@ -115,7 +145,7 @@ h1,h2,h3,h4,h5,h6 {
     width: 100%;
     height: 100%;
     display: inline-block;
-    background-color: rgb(var(--clr-white));
+    background-color: rgb(var(--clr-win-white));
     position: absolute;
     top: 0;
     left: 0;
@@ -128,7 +158,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .btn-neutral:hover,
 .btn-neutral:focus {
-    color: rgb(var(--clr-black));
+    color: rgb(var(--clr-win-black));
     scale: 1.06;
 }
 
@@ -164,7 +194,72 @@ h1,h2,h3,h4,h5,h6 {
 
 
 
+/* ========================================================================= */
+/*                        Slick Carousel                                          */
+/* ========================================================================= */
+ul.slick-dots {
+    /* background-color: green; */
+    list-style: none;
+    display: flex !important;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    bottom: 1rem;
+}
+ul.slick-dots  li {
+    position: relative;
+    z-index: 1;
+    width: .7rem;
+    height: .7rem;
+    background-color: rgb(var(--clr-win-gray-light));
+    border-radius: 50%;
+}
+ul.slick-dots  li:not(:last-child) {
+    margin-right: .5rem;
+}
+ul.slick-dots  li.slick-active {
+    transform: scale(1.4);
+    background-color: rgb(var(--clr-win-blue));
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .4);
+}
+ul.slick-dots  li button {
+    font-size: 0;
+    color: transparent;
+}
 
+
+
+#service-carousel .slick-prev,
+#service-carousel .slick-next {
+    background-color: rgb(var(--clr-win-gray-light));
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 5;
+    bottom: -0%;
+    transform: translate(0, 0);
+    font-size: 1.2rem;
+    color: rgb(var(--clr-win-black));
+    cursor: pointer;
+    transition: .4s;
+    border: 3px solid transparent;
+}
+#service-carousel .slick-prev:hover,
+#service-carousel .slick-next:hover {
+    background-color: rgb(34 211 238 / 0.5);
+    border: 3px solid rgb(var(--clr-win-blue));
+} 
+
+#service-carousel .slick-next {
+    left: 3.5rem;
+}
+#service-carousel .slick-prev {
+    left: 0;
+}
 
 
 

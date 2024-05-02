@@ -1,8 +1,24 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import BlogCard from "../components/BlogCard.astro";
 
 import { Image } from "astro:assets";
 import WinnardHero from "/src/assets/winnard-2.png"
+import skillHtml from "/src/assets/skill-html.png"
+import testimonial1 from "/src/assets/testimonial-1.png"
+
+
+// for blog
+
+import { HOMEPAGE_ARTICLES_LIMIT } from "../constants";
+
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content"
+
+const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort((a:CollectionEntry<'posts'>, b:CollectionEntry<'posts'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const mostRecentArticle: CollectionEntry<'posts'> = posts[0];
+const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 ---
 
 
@@ -28,7 +44,7 @@ import WinnardHero from "/src/assets/winnard-2.png"
     <section class="section-hero bg-white dark:bg-gray-900">
         <div class="container wrapper">
             <div class="grid px-4 py-8 mx-auto lg:gap-8 xl:gap-16 gap-y-12 lg:py-16 lg:grid-cols-12">
-                <div class="lg:mt-0 lg:col-span-5 ">
+                <div class="lg:mt-0 lg:col-span-5 flex justify-center">
                     <Image src={WinnardHero} alt="Winnard Bansah">
                 </div>  
                 <div class="mr-auto place-self-center lg:col-span-7">
@@ -43,6 +59,117 @@ import WinnardHero from "/src/assets/winnard-2.png"
     <!-- End of section hero -->
 
 
+
+
+    <!-- ===================== About Me ==================== -->
+    <section class="section-hero__about py-20">
+        <div class="container wrapper">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <div>
+                    <h2 class="heading-secondary">About Me</h2>
+                    <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">I’ve been developing websites since 2010</h1>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+                    <a href="#" class="btn btn-neutral mt-8">More about me</a>
+                </div>
+                <div></div>
+            </div>
+        </div>
+    </section>
+    <!-- End of About me -->
+
+
+
+    <!-- =================== Services ==================== -->
+    <section class="section-hero__services py-20">
+        <div class="container wrapper">
+            <h2 class="heading-secondary">My Services</h2>
+            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">What the clients say about my work</h1>
+
+            <div id="service-carousel" class="w-full pb-20 service-carousel"> 
+                <!-- Skill 1 -->
+                <div class="service">
+                    <Image src={skillHtml} alt="Motor Insurance" class=""/>
+                    <h2 class="">hTML & CSS</h2>
+                    <p class="mb-8">Duis aute irure dolor in reprehenderit in voluptate. Duis aute irure dolor in reprehenderit in voluptate.</p>
+                    <div class="dash"></div>
+                </div> 
+                <!-- Skill 2 -->
+                <div class="service">
+                    <Image src={skillHtml} alt="Motor Insurance" class=""/>
+                    <h2 class="">hTML & CSS</h2>
+                    <p class="mb-8">Duis aute irure dolor in reprehenderit in voluptate. Duis aute irure dolor in reprehenderit in voluptate.</p>
+                    <div class="dash"></div>
+                </div> 
+                <!-- Skill 3 -->
+                <div class="service">
+                    <Image src={skillHtml} alt="Motor Insurance" class=""/>
+                    <h2 class="">hTML & CSS</h2>
+                    <p class="mb-8">Duis aute irure dolor in reprehenderit in voluptate. Duis aute irure dolor in reprehenderit in voluptate.</p>
+                    <div class="dash"></div>
+                </div> 
+                <!-- Skill 4 -->
+                <div class="service">
+                    <Image src={skillHtml} alt="Motor Insurance" class=""/>
+                    <h2 class="">hTML & CSS</h2>
+                    <p class="mb-8">Duis aute irure dolor in reprehenderit in voluptate. Duis aute irure dolor in reprehenderit in voluptate.</p>
+                    <div class="dash"></div>
+                </div> 
+        </div>
+        </div>
+    </section>
+    <!-- End of services -->
+
+
+
+
+
+
+    <!-- ============================= Section Testimonials ========================= -->
+    <section class="section-testimonials py-20">
+        <div class="container wrapper">
+            <h2 class="heading-secondary">My Services</h2>
+            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">What the clients say about my work</h1>
+
+            <div id="testimonial-carousel" class="w-full pb-20 testimonial-carousel"> 
+                <!-- testimonial 1 -->
+                <div class="testimonial">
+                    <div>
+                        <Image src={testimonial1} alt="Motor Insurance" class=""/>
+                    </div>
+                    <div>
+                        <p class="company">COMPANY</p>
+                        <p class="mb-8">Duis aute irure dolor in reprehenderit in voluptate. Duis aute irure dolor in reprehenderit in voluptate.</p>
+                        <div class="name">
+                            <h2 class="heading-secondary">Jim Benson</h2>
+                            <p>VP OF DEVOPS AT COMPANY</p>
+                        </div>
+                    </div>
+                </div> 
+                
+        </div>
+        </div>
+    </section>
+    <!-- End of section testimonials -->
+
+
+
+
+
+    <!--==================== Section blog ============== -->
+    <section class="section-news py-20">
+        <div class="container wrapper">
+                <h2 class="heading-secondary mb-12">News &amp; Blog</h2>
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                        {otherArticles.slice(0, HOMEPAGE_ARTICLES_LIMIT).map(
+                                article => (
+                                        <BlogCard post={article} />
+                                )
+                        )}
+                </div>
+                <a href="/blog" class="btn btn-neutral mt-12">More Interesting items</a>
+        </div>
+    </section>
+    <!-- End of blog -->
 </MainLayout>
 
 
@@ -95,7 +222,82 @@ import WinnardHero from "/src/assets/winnard-2.png"
 /////////////////// Section Hero ==================================
 .section-hero {
     background: linear-gradient( to bottom, #002035, #111111);
-    color: rgb(var(--clr-white));
+    color: rgb(var(--clr-win-white));
 }
-// End of section coming soon
+// End of Section-hero
+
+
+
+
+
+// ===================== Section -Services ===========================
+.section-hero__services {
+    background-color: rgb(var(--clr-gray));
+
+    .service {
+        background-color: rgb(var(--clr-win-black));
+        padding: 2rem;
+        border-radius: 1rem;
+        text-align: left;
+        margin-inline: .5rem;
+
+        img {
+            width: 80px;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            line-height: 1;
+            margin-bottom: .5rem;;
+        }
+
+        .dash {
+            width: 40px;
+            height: 3px;
+            border-radius: 3px;
+            background-color: rgb(var(--clr-win-white));
+        }
+    }
+}
+// End of section-services
+
+
+
+
+// =========================== Section Testimonial ==============================
+.section-testimonial {
+
+    .testimonial {
+        display: flex !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// =================================================================================
+                        // Media Queries
+// ================================================================================
+@media screen and (max-width: 767px) {
+    .section-hero {
+        padding-top: 7rem;
+
+        img {
+            width: 80%;
+        }
+    }
+}
+
 </style>
