@@ -1,0 +1,188 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+import { Image } from "astro:assets";
+import NGI from "../assets/ngi-logo.png";
+import Project1 from "../assets/project-1.png";
+---
+
+
+
+
+
+
+
+
+<MainLayout title="Winnard | Portfolio">
+
+    <!-- ============================ Portfolio Hero ===================== -->
+    <section class="section-portfolio__hero py-24 bg-winblack">
+        <div class="container wrapper">
+            <div class="hero-container flex flex-col items-center justify-center text-center ">
+                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Portfolio</h1>
+                <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 15</p>
+            </div>
+        </div>
+    </section>
+    <!-- End of Portfolio Hero -->
+
+
+    <!-- ============================ Portfolio Hero ===================== -->
+    <section class="section-projects bg-windarkGray py-20">
+        <div class="container wrapper">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- NGI PROJECT -->
+                <div class="project">
+                    <!-- head -->
+                    <div class="head">
+                        <Image src={NGI} alt="NGI logo" />
+                        <h1>Northern Girl Initiative</h1>
+                        <ul class="tag-list">
+                            <li class="tag-item">copywriting</li>
+                            <li class="tag-item">copywriting</li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <Image src={Project1} alt="My first project" />
+                    </div>
+                </div>
+                <!-- End of NGI project -->
+
+                <!-- NGI PROJECT -->
+                <div class="project">
+                    <!-- head -->
+                    <div class="head">
+                        <Image src={NGI} alt="NGI logo" />
+                        <h1>Northern Girl Initiative</h1>
+                        <ul class="tag-list">
+                            <li class="tag-item">copywriting</li>
+                            <li class="tag-item">copywriting</li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <Image src={Project1} alt="My first project" />
+                    </div>
+                </div>
+                <!-- End of NGI project -->
+
+                <!-- NGI PROJECT -->
+                <div class="project">
+                    <!-- head -->
+                    <div class="head">
+                        <Image src={NGI} alt="NGI logo" />
+                        <h1>Northern Girl Initiative</h1>
+                        <ul class="tag-list">
+                            <li class="tag-item">copywriting</li>
+                            <li class="tag-item">copywriting</li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <Image src={Project1} alt="My first project" />
+                    </div>
+                </div>
+                <!-- End of NGI project -->
+
+                <!-- NGI PROJECT -->
+                <div class="project">
+                    <!-- head -->
+                    <div class="head">
+                        <Image src={NGI} alt="NGI logo" />
+                        <h1>Northern Girl Initiative</h1>
+                        <ul class="tag-list">
+                            <li class="tag-item">copywriting</li>
+                            <li class="tag-item">copywriting</li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <Image src={Project1} alt="My first project" />
+                    </div>
+                </div>
+                <!-- End of NGI project -->
+
+
+            </div>
+        </div>
+    </section>
+    <!-- End of section projects -->
+
+
+</MainLayout>
+
+
+
+
+
+
+<style lang="scss">
+
+// ================= Portfolio Hero =============
+    .section-portfolio__hero {
+
+        .hero-container {
+            width: 100%;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+    }
+    // end of portfolio heer
+
+
+    .section-projects {
+
+        .project {
+            background-color: rgb(var(--clr-win-black));
+            border-radius: 1rem;
+            overflow: hidden;
+
+            .head {
+                padding: 2rem;
+
+                img {
+                    width: 150px;
+                }
+                h1 {
+                    font-size: 2rem;
+                    font-weight: bolder;
+                    margin: .5rem 0;
+                }
+            }
+            .tag-list {
+                display: flex;
+
+                .tag-item {
+                    display: inline-block;
+                    padding: .3rem 1.5rem;
+                    border-radius: 1rem;
+                    font-size: .8rem;
+
+                    &:nth-child(1) {
+                        background-color: #FFF9BF;
+                        color: #D0BB00;
+                    }
+                    &:nth-child(2) {
+                        background-color: #C5DCFF;
+                        color: #003381;
+                    }
+
+                    &:not(:last-child) {
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+        // end of head
+
+        .body {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            background-color: red;
+
+            img {
+                // object-fit: cover;
+            }
+        }
+    }
+
+</style>
