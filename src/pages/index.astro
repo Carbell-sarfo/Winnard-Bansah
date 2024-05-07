@@ -1,6 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import BlogCard from "../components/BlogCard.astro";
+import BlogSection from '../components/BlogSection.astro';
 
 import { Image } from "astro:assets";
 import WinnardHero from "/src/assets/winnard-2.png"
@@ -10,15 +10,6 @@ import testimonial1 from "/src/assets/testimonial-1.png"
 
 // for blog
 
-import { HOMEPAGE_ARTICLES_LIMIT } from "../constants";
-
-import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content"
-
-const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort((a:CollectionEntry<'posts'>, b:CollectionEntry<'posts'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-
-const mostRecentArticle: CollectionEntry<'posts'> = posts[0];
-const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 ---
 
 
@@ -184,24 +175,9 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 
 
+<BlogSection></BlogSection>
 
-
-    <!--==================== Section blog ============== -->
-    <section class="section-news py-20">
-        <div class="container wrapper">
-                <h2 class="heading-secondary mb-12">News &amp; Blog</h2>
-                <h1 class="max-w-2xl text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white mb-20">Check out my latest articles and tutorials</h1>
-                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                        {otherArticles.slice(0, HOMEPAGE_ARTICLES_LIMIT).map(
-                                article => (
-                                        <BlogCard post={article} />
-                                )
-                        )}
-                </div>
-                <a href="/blog" class="btn btn-neutral mt-12">More Interesting items</a>
-        </div>
-    </section>
-    <!-- End of blog -->
+    
 </MainLayout>
 
 
@@ -253,7 +229,8 @@ const otherArticles: CollectionEntry<'posts'>[] = posts.slice(1);
 
 /////////////////// Section Hero ==================================
 .section-hero {
-    background: linear-gradient( to bottom, #002035, #111111);
+    // background: linear-gradient( to bottom, #002035, #111111);
+    background-color: rgb(var(--clr-win-black));
     color: rgb(var(--clr-win-white));
 }
 // End of Section-hero

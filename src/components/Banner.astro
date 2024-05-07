@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets";
+import Winnard2 from "../assets/winnard-2.png"
+---
+
+
+<!-- ========================== Section Banner ============================ -->
+<section class="section-banner">
+    <div class="container wrapper">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 items-center">
+            <div class="px-16">
+                <Image src={Winnard2} alt="Winnard 4" />
+            </div>
+            <div>
+                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Nice to meet you, I’m Winnard</h1>
+                <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 15</p>
+                <a href="#" class="btn btn-neutral">Click on Me</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Section Banner -->
+
+
+
+
+
+
+
+
+
+
+<style lang="scss">
+
+// ================ Section Banner =================
+.section-banner {
+    background-color: rgba(0, 155, 255, .1);
+    padding: 2rem 0;
+}
+// end of section banner
+</style>

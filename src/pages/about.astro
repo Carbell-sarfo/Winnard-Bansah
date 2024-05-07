@@ -1,0 +1,226 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import BlogSection from "../components/BlogSection.astro";
+import Banner from "../components/Banner.astro";
+
+import { Image } from "astro:assets";
+import AboutHero from "../assets/about-hero.png"
+import Winnard3 from "../assets/winnard-3.png"
+import Winnard4 from "../assets/winnard-4.png"
+import Winnard5 from "../assets/winnard-5.png"
+---
+
+
+
+<MainLayout title="Winnard | About">
+
+    <!-- ======================== About Hero =================== -->
+    <section class="section-about__hero ">
+        <div class="container wrapper">
+            <div class="grid px-4 py-8 mx-auto gap-20 lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+                <div class="mr-auto place-self-center lg:col-span-7">
+                    <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Nice to meet you, I’m Winnard</h1>
+                    
+                    <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl pb-8">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 15.</p>
+                    <hr>
+                </div>
+                <div class="lg:mt-0 lg:col-span-5 lg:flex">
+                    <Image src={AboutHero} alt="Winnard Bansah photo with light" />
+                </div>                
+            </div>
+        </div>
+    </section>
+    <!-- End of About Hero -->
+
+
+    <!-- ======================== About =================== -->
+    <section class="section-about">
+        <div class="container wrapper">
+            <div class="grid gap-20 lg:gap-8 grid-cols-1 md:grid-cols-2 items-center">
+                <div>
+                    <Image src={Winnard3} alt="Winnard-3" />
+                </div>
+                <div>
+                    <h2 class="heading-secondary">About Me</h2>
+                    <h1 class="max-w-2xl mb-8 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">I’ve been developing websites since 2010</h1>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+                    <br>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+                </div>
+                <div>
+                    <h2 class="heading-secondary">About Me</h2>
+                    <h1 class="max-w-2xl mb-8 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">I’ve been developing websites since 2010</h1>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+                    <br>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+                    <br>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+                </div>
+                <div>
+                    <Image src={Winnard4} alt="Winnard 5" class="mb-4" />
+                    <Image src={Winnard5} alt="Winnard 5" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of About -->
+
+
+
+
+
+<Banner></Banner>
+
+
+
+
+
+
+    <!-- =========================== Section Skills ==================== -->
+    <section class="section-about__skills">
+        <div class="container wrapper">
+            <h2 class="heading-secondary">My Skills</h2>
+                <h1 class="max-w-2xl mb-8 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Discover what tools I use for work</h1>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="skill">
+                        <!-- Number -->
+                        <div class="number">
+                            <div class="dash"></div>
+                            <p>01</p>
+                        </div>
+
+                        <!-- title -->
+                        <h1 class="my-4">UI DESIGN</h1>
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatibus ut totam laboriosam voluptates recusandae quasi aperiam, necessitatibus laborum, iste nobis, enim blanditiis doloremque sapiente!</p>
+                    </div>
+                    <div class="skill">
+                        <!-- Number -->
+                        <div class="number">
+                            <div class="dash"></div>
+                            <p>01</p>
+                        </div>
+
+                        <!-- title -->
+                        <h1 class="my-4">UI DESIGN</h1>
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatibus ut totam laboriosam voluptates recusandae quasi aperiam, necessitatibus laborum, iste nobis, enim blanditiis doloremque sapiente!</p>
+                    </div>
+                    <div class="skill">
+                        <!-- Number -->
+                        <div class="number">
+                            <div class="dash"></div>
+                            <p>01</p>
+                        </div>
+
+                        <!-- title -->
+                        <h1 class="my-4">UI DESIGN</h1>
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatibus ut totam laboriosam voluptates recusandae quasi aperiam, necessitatibus laborum, iste nobis, enim blanditiis doloremque sapiente!</p>
+                    </div>
+                    <div class="skill">
+                        <!-- Number -->
+                        <div class="number">
+                            <div class="dash"></div>
+                            <p>01</p>
+                        </div>
+
+                        <!-- title -->
+                        <h1 class="my-4">UI DESIGN</h1>
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatibus ut totam laboriosam voluptates recusandae quasi aperiam, necessitatibus laborum, iste nobis, enim blanditiis doloremque sapiente!</p>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <!-- End of Section skills -->
+
+    <!-- Section -->
+    <BlogSection></BlogSection>
+</MainLayout>
+
+
+
+
+
+
+
+
+<style lang="scss">
+
+// =============== About hero ===============
+.section-about__hero {
+    padding-top: 8rem;
+    background-color: rgb(var(--clr-win-black));
+}
+// End of About hero
+
+
+// =============== About ===============
+.section-about {
+    padding: 8rem 0;
+}
+// End of about
+
+
+
+
+
+// ================= skills =====================
+.section-about__skills {
+    padding: 8rem 0;
+
+    .skill {
+        padding: 2rem;
+        border: 1px solid rgb(var(--clr-win-gray));
+        border-radius: 1rem;
+        background-color: rgb(var(--clr-win-black));
+        cursor: pointer;
+        transition: .2s;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.193);
+
+        &:hover {
+            box-shadow: 0 4px 5px rgba(0, 0, 0, 0.103);
+            transform: translateY(-5px);
+        }
+
+
+        .number {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            p {
+                color: rgb(var(--clr-win-gray-light));
+            }
+        }
+        .dash {
+            width: 2rem;
+            height: .3rem;
+            background-color: rgb(var(--clr-win-blue));
+
+        }
+        h1 {
+            font-size: 2rem;
+            line-height: 1;
+        }
+    }
+}
+// End of skills
+
+
+
+
+
+
+// =====================================================
+//                 Media Queries
+// ====================================================
+
+@media screen and (min-width: 768px) {
+    .section-about__hero {
+        padding-top: 0;
+    }
+}
+</style>
