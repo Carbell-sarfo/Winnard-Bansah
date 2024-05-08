@@ -204,12 +204,30 @@ import Logo from "/src/assets/logo-2.png"
             width: 1.7rem;
             height: .1rem;
             background-color: rgb(var(--clr-win-gray-light));
+            transition: .4s;
 
             &:not(:last-child) {
                 margin-bottom: .5rem;
             }
         }
+        &.close {
+            
+            
+            .lines {
+    
+                &:nth-child(1) {
+                    transform: rotate(-45deg) translate(-8px, 6px);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    transform: rotate(45deg) translate(-7px, -7px);
+                }
+            }
+        }
     }
+
 }
 
 
