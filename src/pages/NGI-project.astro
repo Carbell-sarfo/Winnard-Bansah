@@ -4,6 +4,7 @@ import PageHero from "../components/PageHero.astro";
 
 import { Image } from "astro:assets";
 import NGIPhoto from "../assets/ngi-website.png";
+import Banner from "../components/Banner.astro";
 
 ---
 
@@ -21,14 +22,68 @@ import NGIPhoto from "../assets/ngi-website.png";
 
 
 <!-- ======================== Project Information ====================== -->
-<section class="section-info py-20">
+<section class="section-info py-20 md:py-36">
     <div class="container wrapper">
         <!-- Project Image -->
         <Image src={NGIPhoto} alt="NGI Website" />
+
+        <div class="info-container py-20">
+            <!-- Side navigation -->
+            <div class="sidenav">
+                <ul class="sidenav-list">
+                    <li class="sidenav-item">
+                        <h1>client</h1>
+                        <p>Northern Girl Initiative</p>
+                    </li>
+                    <li class="sidenav-item">
+                        <h1>services</h1>
+                        <p>Copywriting &amp; Design</p>
+                    </li>
+                    <li class="sidenav-item">
+                        <h1>Website</h1>
+                        <p>
+                            <a href="#">Live Preview &rightarrow;</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <!-- End of side navigation -->
+
+            <div class="info-content">
+                <!-- About the project -->
+                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">About the project</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 15. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 15Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 15 </p>
+
+                <ol class="ml-4 list-decimal my-4 mb-20">
+                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 15. L</li>
+                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 15. L</li>
+                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 15. L</li>
+                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 15. L</li>
+                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 15. L</li>
+                </ol>
+
+
+                <!-- Goal of the project -->
+                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">What was the goal of the project?</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 15. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 15Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 15 s</p>
+
+                <Image src={NGIPhoto} alt="NGI Website" class="my-8 mb-20" />
+
+                <!-- Project Execution -->
+                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Project Execution</h1>
+                <p class="mb-20">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 15. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 15Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 15 s</p>
+
+                <!-- project Outcome -->
+                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Project Outcome</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 15. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 15Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 15 s</p>
+            </div>
+        </div>
     </div>
 </section>
 <!-- End of Project Information -->
 
+
+<Banner></Banner>
 
 </MainLayout>
 
@@ -39,41 +94,74 @@ import NGIPhoto from "../assets/ngi-website.png";
 <style lang="scss">
 
 
-/* Sticky Side Navigation */ 
-#sidenav {
+.info-container {
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 8;
+}
+
+
+/* Sticky Side Navigation */ 
+.sidenav {
+    width: 100%;
+    // height: 100%;
     
 
-    ul {
-        border: 1px solid lightgray;
+    .sidenav-list {
         position: sticky;
-        position: -webkit-sticky; /* Safari */
-        top: 13rem;
+        top: 100px;
+        left: 0;
     }
-
-    li {
-        width: 100%;
-        display: inline-block;
+    .sidenav-item {
 
         &:not(:last-child) {
-            border-bottom: 1px solid lightgray;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            color: #5D5D5D;
+            font-weight: 400;
+            text-transform: uppercase;
+            line-height: 1;
         }
 
         a {
             display: inline-block;
-            width: 100%;
-            height: 100%;
-            padding: .5rem 0;
-            padding-left: 1rem;
-            transition: .3s;
+            color: rgb(var(--clr-win-blue));
+            transition: .2s;
 
-            &:hover,
-            &:focus {
-                background-color: rgb(199, 199, 199);
-
+            &:hover, &:focus {
+                transform: translateX(10px);
             }
         }
     }
 }
 
+.info-content {
+    grid-column: span 4 / span 4;
+}
+
+
+
+
+
+
+// ==================================== MEDIA QUERRIES ======================
+@media screen and (max-width: 765px) {
+    .info-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;;
+    }
+
+
+    // Side nav
+    .sidenav {
+        
+        .sidenav-list {
+            position: static;
+        }
+    }
+}
 </style>
