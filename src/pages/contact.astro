@@ -1,0 +1,91 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+
+
+<MainLayout title="Winnard | Contact Me">
+
+    <section class="section-contact py-40">
+        <div class="container wrapper">
+            <div class="contact-container grid grid-cols-1 md:grid-cols-4 gap-8 md:hidden">
+                <div>
+                    <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Interested in working together? Let’s talk <i class="fa-solid fa-arrow-right inline-block ml-4 text-winblue"></i></h1>
+                </div>
+
+                <!-- contact Form -->
+                <form action="@">
+                    <input type="text" required id="fname" placeholder="Full Name">
+                    <input type="email" required id="email" placeholder="Email Address">
+                    <textarea name="message" id="message" placeholder="Send your message" cols="30" rows="10"></textarea>
+
+                    <button type="submit" class="btn btn-yellow">Send &rightarrow;</button>
+                </form>
+  
+            </div>
+        </div>
+    </section>
+
+</MainLayout>
+
+
+
+
+
+
+<style lang="scss">
+
+.contact-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+
+// contact Form
+form {
+    // grid-column: span 2 / span 2;
+
+    input,textarea {
+        width: 100%;
+        background: transparent;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid darkgray;
+        resize: none;
+        margin-bottom: 2rem;
+        font-size: .9rem;
+        font-family: inherit;
+        transition: .2s;
+
+        &:focus::placeholder {
+            transform: translateY(-.8rem) scale(.8);
+            color: rgb(var(--clr-win-blue));
+        }
+
+        &::placeholder {
+            color: darkgray;
+            transition: .2s;
+            transform-origin: left;
+        }
+
+        &:focus {
+            box-shadow: none;
+            border-bottom: 2px solid rgb(var(--clr-win-blue));
+        }
+    }
+}
+
+
+
+
+
+
+
+// ========================== media queries =========================
+@media screen and (max-width: 765px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
