@@ -17,12 +17,12 @@
     :root {
         --clr-win-orange: 254 165 2;
         --clr-win-blue: 0 94 155;
-      --clr-win-gray-light: 217 217 217;
-      --clr-win-yellow: 255 231 17;
-      --clr-win-gray-dark: 17 17 17;
-      --clr-win-gray: 23 23 23;
-      --clr-win-black: 12 12 12;
-      --clr-win-white: 255 255 255;
+        --clr-win-gray-light: 217 217 217;
+        --clr-win-yellow: 255 231 17;
+        --clr-win-gray-dark: 17 17 17;
+        --clr-win-gray: 23 23 23;
+        --clr-win-black: 12 12 12;
+        --clr-win-white: 255 255 255;
 
       /* --color-blue: rgba(0 94 155);
       --color-orange: rgb(254 165 2);
@@ -33,6 +33,23 @@
       --color-white: rgb(255, 255, 255); */
     }
   }
+
+  /* =============== Dark Theme ============================== */
+    .dark-theme {
+        --clr-win-gray-dark: 217 217 217;
+        --clr-win-gray-light: 17 17 17;
+        --clr-win-gray: 23 23 23;
+        --clr-win-white: 12 12 12;
+        --clr-win-black: 255 255 255;
+    }
+    .light-theme {
+        --clr-win-gray-light: 217 217 217;
+        --clr-win-yellow: 255 231 17;
+        --clr-win-gray-dark: 17 17 17;
+        --clr-win-gray: 23 23 23;
+        --clr-win-black: 12 12 12;
+        --clr-win-white: 255 255 255;
+    }
 
 
 ::selection {
@@ -54,10 +71,14 @@ body {
     transition: .4s;
     background-color: rgb(var(--clr-win-gray-dark));
     color: rgb(var(--clr-win-white));
+    transition: .4s;
 }
 
 
 
+section {
+    transition: .4s;
+}
 
 
 

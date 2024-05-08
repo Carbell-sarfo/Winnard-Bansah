@@ -35,3 +35,57 @@ function openMenu () {
         showMenu = false;
     }
 }
+
+
+
+
+
+
+
+
+
+
+// Dark Mode Toggler 
+
+// =========== THEME TOGGLE ===============
+const themeToggle = document.querySelector("#switch");
+// const logo = document.querySelector(".logo");
+let darkMode = localStorage.getItem("darkMode");
+
+
+function enableDarkMode() {
+    document.body.classList.remove("light-theme");
+    document.body.classList.add("dark-theme");
+    // logo.src = "/assets/images/logo-dark.png";
+    // logo.src = "/assets/images/logo-light.png";
+    // themeToggle.checked = false;
+    localStorage.setItem("darkMode", "enabled");
+}
+function enableLightMode() {
+    document.body.classList.add("light-theme");
+    document.body.classList.remove("dark-theme");
+    // logo.src = "/assets/images/logo-light.png";
+    // logo.src = "/assets/images/logo-dark.png";
+    // themeToggle.checked = true;
+    localStorage.setItem("darkMode", null);
+}
+
+
+if (darkMode === "enabled") {
+    enableDarkMode();
+}
+
+
+
+// Adding event listener to listen for "checking on the input" and changing theme
+themeToggle.addEventListener('change', () => {
+    // document.body.classList.contains("dark-theme") ? enableLightMode() : enableDarkMode();
+    darkMode = localStorage.getItem("darkMode");
+    if(darkMode !== "enabled") {
+        enableDarkMode();
+        console.log(darkMode);
+    }else {
+        enableLightMode();
+        console.log(darkMode);
+    }
+})
