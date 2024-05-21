@@ -175,9 +175,83 @@ import testimonial1 from "/src/assets/testimonial-1.png"
 
 
 
-<BlogSection></BlogSection>
 
-    
+
+<!-- ========================== Section Certificates ========================= -->
+<section class="section-certificates">
+    <div class="container wrapper">
+        <h2 class="heading-secondary">Certifications</h2>
+        <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">I am committed to life-long learning.</h1>
+
+        <!-- ALX COURSE -->
+        <div class="cert-container">
+            <div class="cert">
+                <div>
+                    <h4 class="text-2xl font-bold dark:text-white">Programme Name</h4>
+                    <p class="date">Jan - Mar. 2024</p>
+                </div>
+
+                <!-- Organisation giving the cert -->
+                <h3>ALX</h3>
+
+                <!-- View cert -->
+                <a href="#" target="blank" class="cert-cta">View Certificate &UpperRightArrow;</a>
+            </div>
+            <!-- End of the ALX course -->
+
+            <!-- ALX COURSE Anaa -->
+            <div class="cert light">
+                <div>
+                    <h4 class="text-2xl font-bold dark:text-white">Programme Name</h4>
+                    <p class="date">Jan - Mar. 2024</p>
+                </div>
+
+                <!-- Organisation giving the cert -->
+                <h3>ALX</h3>
+
+                <!-- View cert -->
+                <a href="#" target="blank" class="cert-cta">View Certificate &UpperRightArrow;</a>
+            </div>
+            <!-- End of the ALX course -->
+
+
+            <!-- ALX COURSE -->
+            <div class="cert">
+                <div>
+                    <h4 class="text-2xl font-bold dark:text-white">Programme Name</h4>
+                    <p class="date">Jan - Mar. 2024</p>
+                </div>
+
+                <!-- Organisation giving the cert -->
+                <h3>ALX</h3>
+
+                <!-- View cert -->
+                <a href="#" target="blank" class="cert-cta">View Certificate &UpperRightArrow;</a>
+            </div>
+            <!-- End of the ALX course -->
+        </div>
+
+
+
+    </div>
+</section>
+<!-- End of section certificates -->
+
+
+
+
+
+<!-- ================== Blog Section ======================= -->
+<BlogSection></BlogSection>
+<!-- ====================== End of Blog Section ================= -->
+
+
+
+<section class="section-trial py-40">
+    <div class="container wrapper">
+        <div class="box"></div>
+    </div>
+</section>
 </MainLayout>
 
 
@@ -201,6 +275,12 @@ import testimonial1 from "/src/assets/testimonial-1.png"
 
 
 <style lang="scss">
+
+.box {
+        width: 100px;
+        height: 100px;
+        background: green;
+    }
 
 // //////////////////////// Section Coming Soon ======================
 .section-coming-soon {
@@ -310,6 +390,61 @@ import testimonial1 from "/src/assets/testimonial-1.png"
 }
 
 
+
+// ======================= Section Certificates =====================
+.section-certificates {
+    padding: 10rem 0;
+    background-color: rgb(var(--clr-win-black));
+
+    .cert-container {
+        
+    }
+
+    .cert {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        padding: 2rem 1rem;
+        align-items: center;
+        border-block: 1px solid darkgray;
+        background-color: rgb(var(--clr-win-black));
+
+        &:hover {
+            background-color: #005d9b34;
+        }
+
+        // make the next section light and then the next section dark
+        &.light {
+            background-color: rgb(var(--clr-win-gray));
+
+            &:hover {
+            background-color: #005d9b34;
+        }
+        }
+
+        // date
+        .date {
+            color: rgb(var(--clr-win-gray-light));
+            font-size: .8rem;
+            margin-top: .5rem;
+        }
+
+        // Orginsation
+        h3 {
+            justify-self: center;
+        }
+
+        // Call to action links to see certificates
+        .cert-cta {
+            color: rgb(var(--clr-win-blue));
+
+            &:hover {
+                color: rgb(var(--clr-win-white));
+            }
+        }
+    }
+}
+// End of certificates
 
 
 

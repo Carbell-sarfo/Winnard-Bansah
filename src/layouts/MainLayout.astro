@@ -2,7 +2,6 @@
 import Footer from "../components/Footer.astro"
 import Nav from "../components/Nav.astro"
 import "../styles/styles.css"
-// import "../js/main.js"
 interface Props {
 	title: string;
 	description?: string;
@@ -83,7 +82,12 @@ image="/images/band.jpg" } = Astro.props;
 		<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
 
+		<!-- Importing Slick -->
 		<script src="./../js/slick.js"></script>
+		
+
+		  <!-- Adding our local GSAP file for our animations -->
+		  <script src="/src/js/gsap.js"></script>
 		
 	</body>
 </html>
