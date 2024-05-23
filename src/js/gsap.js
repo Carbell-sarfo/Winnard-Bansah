@@ -8,7 +8,7 @@ var tl = gsap.timeline()
 tl.to(".hero-img",  {
     opacity: 1,
     y: 0,
-    duration: 2,
+        duration: 2,
     scale: 1,
 } )
 

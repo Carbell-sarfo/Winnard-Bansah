@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
+import PageHero from "../../components/PageHero.astro";
 import BlogCard from "../../components/BlogCard.astro";
 import { getCollection } from 'astro:content'
 import type { CollectionEntry } from "astro:content";
@@ -9,7 +10,16 @@ const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort((a
 ---
 
 <MainLayout title="Winnard Bansah | Blog">
-    <section class="py-48">
+
+    <!--============================ Portfolio Hero =========================  -->
+  <PageHero>
+      <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">My Blog</h1>
+      <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 15</p>
+  </PageHero>
+
+
+
+    <section class="py-20">
         <div class="container wrapper">
             <h1 class="text-2xl py-3">All Articles</h1>
             <!-- Main Grid -->
@@ -20,7 +30,7 @@ const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort((a
             </div>
           
               <!-- Pagination -->
-              <div class="flex justify-between mt-10">
+              <!-- <div class="flex justify-between mt-10">
                 <a href="#" class="inline-block bg-indigo-100 px-3 py-2 hover:bg-indigo-600 hover:text-white rounded-lg">
                   Previous
                 </a>
@@ -28,7 +38,7 @@ const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort((a
                  class="inline-block bg-indigo-100 px-3 py-2 hover:bg-indigo-600 hover:text-white rounded-lg">
                   Next
                 </a>
-              </div>
+              </div> -->
         </div>
     </section>
 
