@@ -4,8 +4,12 @@ import BlogSection from '../components/BlogSection.astro';
 
 import { Image } from "astro:assets";
 import WinnardHero from "/src/assets/winnard-2.png"
-import skillHtml from "/src/assets/skill-html.png"
-import testimonial1 from "/src/assets/testimonial-1.png"
+import skillWebsite from "/src/assets/skill-website.png";
+import skillSocial from "/src/assets/skill-social.png";
+import skillVideo from "/src/assets/skill-video.png";
+import skillCopy from "/src/assets/skill-copy.png";
+import CarbellSarfo from "/src/assets/carbell-sarfo.png"
+import RichmondDuah from "/src/assets/richmond-duah.png"
 
 
 // for blog
@@ -79,28 +83,28 @@ import testimonial1 from "/src/assets/testimonial-1.png"
             <div id="service-carousel" class="w-full pb-20 service-carousel"> 
                 <!-- Skill 1 -->
                 <div class="service">
-                    <Image src={skillHtml} alt="Motor Insurance" class=""/>
+                    <Image src={skillWebsite} alt="Website / Blog Content" class=""/>
                     <h2 class="">Website / Blog Content</h2>
                     <p class="mb-8">Your website and blog should feature SEO-optimized content that is both informative and engaging.</p>
                     <div class="dash"></div>
                 </div> 
                 <!-- Skill 2 -->
                 <div class="service">
-                    <Image src={skillHtml} alt="Motor Insurance" class=""/>
+                    <Image src={skillCopy} alt="Social Media Copy" class=""/>
                     <h2 class="">Social Media Copy</h2>
                     <p class="mb-8">Your company's social media presence is the digital equivalent of your storefront. The copy acts as the welcoming face that potential customers encounter. I'll ensure clients are greeted with the perfect blend of personality, professionalism, and a touch of humor.</p>
                     <div class="dash"></div>
                 </div> 
                 <!-- Skill 3 -->
                 <div class="service">
-                    <Image src={skillHtml} alt="Motor Insurance" class=""/>
+                    <Image src={skillSocial} alt="Social Media Management" class=""/>
                     <h2 class="">Social Media Management</h2>
                     <p class="mb-8">Overwhelmed by the prospect of delivering effective social media content? Struggling both run your business and manage your online presence? I'll immerse myself in the heart of your brand, then take the reins on content planning, creation, and publishing.</p>
                     <div class="dash"></div>
                 </div> 
                 <!-- Skill 4 -->
                 <div class="service">
-                    <Image src={skillHtml} alt="Motor Insurance" class=""/>
+                    <Image src={skillVideo} alt="Video Editing" class=""/>
                     <h2 class="">Video Editing</h2>
                     <p class="mb-8">I create high-quality, engaging videos using Adobe Premiere Pro. Whether you need promotional content, social media clips, or corporate videos, I bring your vision to life with precision and creativity. </p>
                     <div class="dash"></div>
@@ -125,7 +129,7 @@ import testimonial1 from "/src/assets/testimonial-1.png"
                 <!-- testimonial 1 -->
                 <div class="testimonial service grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
                     <div>
-                        <Image src={testimonial1} alt="Motor Insurance" class=""/>
+                        <Image src={CarbellSarfo} alt="Carbell Sarfo" class=""/>
                     </div>
                     <div class="md:col-span-2">
                         <h3 class="company">SEGULA GLOBAL</h3>
@@ -140,7 +144,7 @@ import testimonial1 from "/src/assets/testimonial-1.png"
                 <!-- testimonial 2 -->
                 <div class="testimonial service grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
                     <div>
-                        <Image src={testimonial1} alt="Motor Insurance" class=""/>
+                        <Image src={RichmondDuah} alt="Richmond Duah" class=""/>
                     </div>
                     <div class="md:col-span-2">
                         <h3 class="company">iRisk Management Ltd.</h3>
@@ -153,7 +157,7 @@ import testimonial1 from "/src/assets/testimonial-1.png"
                 </div> 
                 <!-- end of testimonial-2 -->
                 <!-- testimonial 3 -->
-                <div class="testimonial service grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
+                <!-- <div class="testimonial service grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
                     <div>
                         <Image src={testimonial1} alt="Motor Insurance" class=""/>
                     </div>
@@ -165,7 +169,7 @@ import testimonial1 from "/src/assets/testimonial-1.png"
                             <h3>VP OF DEVOPS AT COMPANY</h3>
                         </div>
                     </div>
-                </div> 
+                </div>  -->
                 <!-- end of testimonial-3 -->
                 
             </div>
@@ -183,7 +187,7 @@ import testimonial1 from "/src/assets/testimonial-1.png"
         <h2 class="heading-secondary">Certifications</h2>
         <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">I am committed to life-long learning.</h1>
 
-        <!-- ALX COURSE -->
+        <!-- AI Career Essentials -->
         <div class="cert-container">
             <div class="cert">
                 <div>
@@ -195,11 +199,11 @@ import testimonial1 from "/src/assets/testimonial-1.png"
                 <h3>ALX</h3>
 
                 <!-- View cert -->
-                <a href="#" target="blank" class="cert-cta">View Certificate &UpperRightArrow;</a>
+                <a href="https://learn.digitaladexpert.com/certificate/?course_id=521465&user_id=697464" target="blank" class="cert-cta">View Certificate &UpperRightArrow;</a>
             </div>
-            <!-- End of the ALX course -->
+            <!-- End of the AI Career Essentials -->
 
-            <!-- ALX COURSE Anaa -->
+            <!-- Fundamentals of Digital Marketing -->
             <div class="cert light">
                 <div>
                     <h4 class="text-2xl font-bold dark:text-white">Fundamentals of Digital Marketing</h4>
@@ -210,12 +214,12 @@ import testimonial1 from "/src/assets/testimonial-1.png"
                 <h3>Google Skillshop</h3>
 
                 <!-- View cert -->
-                <a href="#" target="blank" class="cert-cta">View Certificate &UpperRightArrow;</a>
+                <a href="Fundamentals of Digital Marketing - https://skillshop.exceedlms.com/student/award/r9j2kRF6uhCDunrK78ZzpQVG" target="blank" class="cert-cta">View Certificate &UpperRightArrow;</a>
             </div>
-            <!-- End of the ALX course -->
+            <!-- End of Fundamentals of Digital Marketing -->
 
 
-            <!-- ALX COURSE -->
+            <!-- Digital Ad Expert -->
             <div class="cert">
                 <div>
                     <h4 class="text-2xl font-bold dark:text-white">Digital Ad Expert</h4>
@@ -226,9 +230,9 @@ import testimonial1 from "/src/assets/testimonial-1.png"
                 <h3>Aleph</h3>
 
                 <!-- View cert -->
-                <a href="#" target="blank" class="cert-cta">View Certificate &UpperRightArrow;</a>
+                <a href="https://intranet.alxswe.com/certificates/5mpfy6cEPX" target="blank" class="cert-cta">View Certificate &UpperRightArrow;</a>
             </div>
-            <!-- End of the ALX course -->
+            <!-- End Digital Ad Expert -->
         </div>
 
 
@@ -315,9 +319,13 @@ import testimonial1 from "/src/assets/testimonial-1.png"
 // ===================== Section -Services ===========================
 .section-hero__services {
     background-color: rgb(var(--clr-gray));
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 12rem;
 
     .service {
         background-color: rgb(var(--clr-win-black));
+        height: 100%;
+        width: 100%;
         padding: 2rem;
         border-radius: 1rem;
         text-align: left;
@@ -349,6 +357,7 @@ import testimonial1 from "/src/assets/testimonial-1.png"
 
 // =========================== Section Testimonial ==============================
 .section-testimonials {
+    padding-top: 10rem;
 
     .testimonial {
         display: grid !important;

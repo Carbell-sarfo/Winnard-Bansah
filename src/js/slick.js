@@ -38,7 +38,7 @@ $(document).ready(function(){
         autoplay: true,
         autoplaySpeed: 3000,
         dots: true,
-        arrows: false,
+        arrows: true,
         prevArrow: '<span class="slick-prev"> <i class="fa-solid fa-chevron-left"></i> </span>',
         nextArrow: '<span class="slick-next"> <i class="fa-solid fa-chevron-right"></i> </span>',
     });

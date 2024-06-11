@@ -250,8 +250,13 @@ ul.slick-dots  li button {
 
 
 
-#service-carousel .slick-prev,
-#service-carousel .slick-next {
+
+#testimonial-carousel .slick-next,
+#testimonial-carousel .slick-next,
+#testimonial-carousel .slick-prev,
+#service-carousel .slick-next,
+#service-carousel .slick-next,
+#service-carousel .slick-prev {
     background-color: rgb(var(--clr-win-gray-light));
     width: 2.5rem;
     height: 2.5rem;
@@ -268,6 +273,7 @@ ul.slick-dots  li button {
     cursor: pointer;
     transition: .4s;
     border: 3px solid transparent;
+    display: none;
 }
 #service-carousel .slick-prev:hover,
 #service-carousel .slick-next:hover {
@@ -279,6 +285,12 @@ ul.slick-dots  li button {
     left: 3.5rem;
 }
 #service-carousel .slick-prev {
+    left: 0;
+}
+#testimonial-carousel .slick-next {
+    left: 3.5rem;
+}
+#testimonial-carousel .slick-prev {
     left: 0;
 }
 
